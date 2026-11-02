@@ -257,5 +257,12 @@ function keyPressed() {
   }
 }
 
+function mousePressed() {
+  if (!audioStarted) {
+    userStartAudio();
+    audioStarted = true;
+  }
+}
+
 
 
