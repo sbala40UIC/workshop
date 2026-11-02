@@ -157,7 +157,7 @@ function drawBrush() {
       let waveX = x - i * 3;
       let waveY = y + sin(i * 0.5) * 12;
 
-      vertex(waveX, waveY);
+      vertex(waveX, waveY); // https://p5js.org/reference/p5/vertex/?utm_source=chatgpt.com   vertex x and y coords
     }
 
     endShape();
@@ -243,6 +243,17 @@ function playNote(frequency) {
 
   if (audioStarted) {
     oscillator.freq(frequency);
+  }
+}
+
+
+// ENABLE AUDIO
+
+function keyPressed() {
+
+  if (!audioStarted) {
+    userStartAudio();
+    audioStarted = true;
   }
 }
 
