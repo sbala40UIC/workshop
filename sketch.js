@@ -25,7 +25,7 @@ function setup() {
 
   drawColor = color(255, 100, 180);
 
-  oscillator = new p5.Oscillator("sine");
+  oscillator = new p5.Oscillator(440, "sine");
   oscillator.start();
   oscillator.amp(0);
 
